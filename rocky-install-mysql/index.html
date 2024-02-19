@@ -4,16 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Rocky Install MySQL - luigit的小站</title><meta name="Description" content="撞了南墙才知道回头"><meta property="og:title" content="Rocky Install MySQL" />
-<meta property="og:description" content="本文接RedHat系Linux通过yum安装MySQL 新系统，新旅程 经朋友推荐，我接触了Rocky Linux，经过几天的使用，我将虚拟机和个" />
+        <title>RockyLinux安装MySQL - luigit的小站</title><meta name="Description" content="RockyLinux通过module安装MySQL"><meta property="og:title" content="RockyLinux安装MySQL" />
+<meta property="og:description" content="RockyLinux通过module安装MySQL" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://luigits.gitub.io/rocky-install-mysql/" /><meta property="og:image" content="http://luigits.gitub.io/logo.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-02-17T14:35:20+08:00" />
-<meta property="article:modified_time" content="2024-02-18T13:34:27+08:00" /><meta property="og:site_name" content="我的网站" />
+<meta property="article:modified_time" content="2024-02-19T20:50:36+08:00" /><meta property="og:site_name" content="我的网站" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://luigits.gitub.io/logo.png" /><meta name="twitter:title" content="Rocky Install MySQL"/>
-<meta name="twitter:description" content="本文接RedHat系Linux通过yum安装MySQL 新系统，新旅程 经朋友推荐，我接触了Rocky Linux，经过几天的使用，我将虚拟机和个"/>
+<meta name="twitter:image" content="http://luigits.gitub.io/logo.png" /><meta name="twitter:title" content="RockyLinux安装MySQL"/>
+<meta name="twitter:description" content="RockyLinux通过module安装MySQL"/>
 <meta name="application-name" content="我的网站">
 <meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -23,18 +23,18 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Rocky Install MySQL",
+        "headline": "RockyLinux安装MySQL",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/luigits.gitub.io\/rocky-install-mysql\/"
-        },"genre": "posts","wordcount":  1249 ,
-        "url": "http:\/\/luigits.gitub.io\/rocky-install-mysql\/","datePublished": "2024-02-17T14:35:20+08:00","dateModified": "2024-02-18T13:34:27+08:00","publisher": {
+        },"genre": "posts","keywords": "安装, Linux","wordcount":  1249 ,
+        "url": "http:\/\/luigits.gitub.io\/rocky-install-mysql\/","datePublished": "2024-02-17T14:35:20+08:00","dateModified": "2024-02-19T20:50:36+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "luigit"
-            },"description": ""
+            },"description": "RockyLinux通过module安装MySQL"
     }
     </script></head>
     <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -42,7 +42,14 @@
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="luigit的小站"></a>
+            <a href="/" title="luigit的小站"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/fillet-avatar.png"
+        data-srcset="/images/fillet-avatar.png, /images/fillet-avatar.png 1.5x, /images/fillet-avatar.png 2x"
+        data-sizes="auto"
+        alt="/images/fillet-avatar.png"
+        title="/images/fillet-avatar.png" /><span id="id-1" class="typeit"></span></a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/luigits" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
@@ -65,7 +72,14 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="luigit的小站"></a>
+                <a href="/" title="luigit的小站"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/fillet-avatar.png"
+        data-srcset="/images/fillet-avatar.png, /images/fillet-avatar.png 1.5x, /images/fillet-avatar.png 2x"
+        data-sizes="auto"
+        alt="/images/fillet-avatar.png"
+        title="/images/fillet-avatar.png" /><span id="id-2" class="typeit"></span></a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -100,8 +114,8 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Rocky Install MySQL</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>luigit</a></span></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">RockyLinux安装MySQL</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>luigit</a></span>&nbsp;<span class="post-category">included in <a href="/categories/mysql/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>MySQL</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-02-17">2024-02-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1249 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
@@ -118,11 +132,11 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p>本文接<a href="https://blog.csdn.net/weixin_42844571/article/details/124119066" target="_blank" rel="noopener noreffer ">RedHat系Linux通过yum安装MySQL</a></p>
+<p>本文接<a href="/RedHat%e7%b3%bbLinux%e9%80%9a%e8%bf%87yum%e5%ae%89%e8%a3%85MySQL/index.html" rel="">RedHat系Linux通过yum安装MySQL</a></p>
 </blockquote>
 <h1 id="新系统新旅程">新系统，新旅程</h1>
-<p>  经朋友推荐，我接触了Rocky Linux，经过几天的使用，我将虚拟机和个人租的服务器的系统切换为了Rocky。
-  不得不说，Rocky Linux真的舒服，本人目前使用的是Rocky8.6。上一篇文章讲述了使用包管理器安装MySQL，本篇自然也会讲。</p>
+<p>  经朋友推荐，我接触了Rocky Linux，经过几天的使用，我将虚拟机和个人租的服务器的系统切换为了Rocky。</p>
+<p>  不得不说，Rocky Linux真的舒服，本人目前使用的是Rocky8.6。上一篇文章讲述了使用包管理器安装MySQL，本篇自然也会讲。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -326,20 +340,20 @@ Rocky Linux可以理解为是基于CentOS8做的，对于遇到的问题，可�
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2024-02-18</span>
+                <span>Updated on 2024-02-19</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
                             <a class="link-to-markdown" href="/rocky-install-mysql/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://luigits.gitub.io/rocky-install-mysql/" data-title="Rocky Install MySQL"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://luigits.gitub.io/rocky-install-mysql/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://luigits.gitub.io/rocky-install-mysql/" data-title="Rocky Install MySQL"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://luigits.gitub.io/rocky-install-mysql/" data-title="Rocky Install MySQL"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://luigits.gitub.io/rocky-install-mysql/" data-title="Rocky Install MySQL"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://luigits.gitub.io/rocky-install-mysql/" data-title="RockyLinux安装MySQL" data-hashtags="安装,Linux"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://luigits.gitub.io/rocky-install-mysql/" data-hashtag="安装"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://luigits.gitub.io/rocky-install-mysql/" data-title="RockyLinux安装MySQL"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://luigits.gitub.io/rocky-install-mysql/" data-title="RockyLinux安装MySQL"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://luigits.gitub.io/rocky-install-mysql/" data-title="RockyLinux安装MySQL"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%AE%89%E8%A3%85/">安装</a>,&nbsp;<a href="/tags/linux/">Linux</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
@@ -360,5 +374,5 @@ Rocky Linux可以理解为是基于CentOS8做的，对于遇到的问题，可�
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"Luigit","id-2":"Luigit"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

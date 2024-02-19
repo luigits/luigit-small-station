@@ -1,9 +1,10 @@
-# Rocky Install MySQL
+# RockyLinux安装MySQL
 
 
-> 本文接[RedHat系Linux通过yum安装MySQL](https://blog.csdn.net/weixin_42844571/article/details/124119066)
+> 本文接[RedHat系Linux通过yum安装MySQL](/RedHat系Linux通过yum安装MySQL/index.html)
 # 新系统，新旅程
 &emsp;&emsp;经朋友推荐，我接触了Rocky Linux，经过几天的使用，我将虚拟机和个人租的服务器的系统切换为了Rocky。
+
 &emsp;&emsp;不得不说，Rocky Linux真的舒服，本人目前使用的是Rocky8.6。上一篇文章讲述了使用包管理器安装MySQL，本篇自然也会讲。
 ```bash
 # 我是使用的普通用户，所以需要加sudo，root用户不需要使用sudo

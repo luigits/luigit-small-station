@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>标准库 - Category - luigit的小站</title>
+        <link>http://luigits.gitub.io/categories/%E6%A0%87%E5%87%86%E5%BA%93/</link>
+        <description>标准库 - Category - luigit的小站</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>luigit@aliyun.com (luigit)</managingEditor>
+            <webMaster>luigit@aliyun.com (luigit)</webMaster><lastBuildDate>Mon, 19 Feb 2024 16:46:20 &#43;0800</lastBuildDate><atom:link href="http://luigits.gitub.io/categories/%E6%A0%87%E5%87%86%E5%BA%93/" rel="self" type="application/rss+xml" /><item>
+    <title>slog日志</title>
+    <link>http://luigits.gitub.io/slog%E6%97%A5%E5%BF%97/</link>
+    <pubDate>Mon, 19 Feb 2024 16:46:20 &#43;0800</pubDate>
+    <author>Luigit</author>
+    <guid>http://luigits.gitub.io/slog%E6%97%A5%E5%BF%97/</guid>
+    <description><![CDATA[<p>slog日志使用记录占位</p>]]></description>
+</item>
+<item>
+    <title>Log日志</title>
+    <link>http://luigits.gitub.io/log%E6%97%A5%E5%BF%97/</link>
+    <pubDate>Mon, 19 Feb 2024 14:35:25 &#43;0800</pubDate>
+    <author>Luigit</author>
+    <guid>http://luigits.gitub.io/log%E6%97%A5%E5%BF%97/</guid>
+    <description><![CDATA[Go日志库的基本使用 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 package main import &#34;log&#34; func main() { log.Print(&#34;打印&#34;) log.Printf(&#]]></description>
+</item>
+</channel>
+</rss>

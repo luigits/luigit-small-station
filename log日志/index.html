@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Log日志 - luigit的小站</title><meta name="Description" content="Log日志使用记录"><meta property="og:title" content="Log日志" />
+<meta property="og:description" content="Log日志使用记录" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://luigits.gitub.io/log%E6%97%A5%E5%BF%97/" /><meta property="og:image" content="http://luigits.gitub.io/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-02-19T14:35:25+08:00" />
+<meta property="article:modified_time" content="2024-02-19T14:35:25+08:00" /><meta property="og:site_name" content="我的网站" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://luigits.gitub.io/logo.png" /><meta name="twitter:title" content="Log日志"/>
+<meta name="twitter:description" content="Log日志使用记录"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://luigits.gitub.io/log%E6%97%A5%E5%BF%97/" /><link rel="prev" href="http://luigits.gitub.io/linux%E8%AE%B0%E5%BD%95%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/" /><link rel="next" href="http://luigits.gitub.io/slog%E6%97%A5%E5%BF%97/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Log日志",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/luigits.gitub.io\/log%E6%97%A5%E5%BF%97\/"
+        },"genre": "posts","keywords": "Go, Go标准库, Log库","wordcount":  1681 ,
+        "url": "http:\/\/luigits.gitub.io\/log%E6%97%A5%E5%BF%97\/","datePublished": "2024-02-19T14:35:25+08:00","dateModified": "2024-02-19T14:35:25+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Luigit"
+            },"description": "Log日志使用记录"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="luigit的小站"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/fillet-avatar.png"
+        data-srcset="/images/fillet-avatar.png, /images/fillet-avatar.png 1.5x, /images/fillet-avatar.png 2x"
+        data-sizes="auto"
+        alt="/images/fillet-avatar.png"
+        title="/images/fillet-avatar.png" /><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/luigits" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="luigit的小站"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/fillet-avatar.png"
+        data-srcset="/images/fillet-avatar.png, /images/fillet-avatar.png 1.5x, /images/fillet-avatar.png 2x"
+        data-sizes="auto"
+        alt="/images/fillet-avatar.png"
+        title="/images/fillet-avatar.png" /><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/luigits" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Log日志</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Luigit</a></span>&nbsp;<span class="post-category">included in <a href="/categories/go%E8%AF%AD%E8%A8%80/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Go语言</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-02-19">2024-02-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1681 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#设置日志的格式">设置日志的格式</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="go日志库的基本使用">Go日志库的基本使用</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;log&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">log</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">&#34;打印&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">log</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;格式化: %s&#34;</span><span class="p">,</span> <span class="s">&#34;打印&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;打印并换行&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">  <span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="s">&#34;打印并退出&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">log</span><span class="p">.</span><span class="nf">Fatalf</span><span class="p">(</span><span class="s">&#34;格式化: %s&#34;</span><span class="p">,</span> <span class="s">&#34;打印并退出&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">log</span><span class="p">.</span><span class="nf">Fatalln</span><span class="p">(</span><span class="s">&#34;打印换行并退出&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">log</span><span class="p">.</span><span class="nf">Panic</span><span class="p">(</span><span class="s">&#34;打印并终止运行时&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">log</span><span class="p">.</span><span class="nf">Panicf</span><span class="p">(</span><span class="s">&#34;格式化: %s&#34;</span><span class="p">,</span> <span class="s">&#34;打印并终止运行时&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">log</span><span class="p">.</span><span class="nf">Panicln</span><span class="p">(</span><span class="s">&#34;打印换行并终止运行时&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>log 包提供了 3 类共计 9 种方法来输出日志内容。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名</th>
+<th style="text-align:left">作用</th>
+<th style="text-align:left">使用示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Print</td>
+<td style="text-align:left">打印日志</td>
+<td style="text-align:left">log.Print(“Print”)</td>
+</tr>
+<tr>
+<td style="text-align:center">Printf</td>
+<td style="text-align:left">打印格式化日志</td>
+<td style="text-align:left">log.Printf(“Printf: %s”, “print”)</td>
+</tr>
+<tr>
+<td style="text-align:center">Println</td>
+<td style="text-align:left">打印日志并换行</td>
+<td style="text-align:left">log.Println(“Println”)</td>
+</tr>
+<tr>
+<td style="text-align:center">Panic</td>
+<td style="text-align:left">打印日志后执行 panic(s)（s 为日志内容）</td>
+<td style="text-align:left">log.Panic(“Panic”)</td>
+</tr>
+<tr>
+<td style="text-align:center">Panicf</td>
+<td style="text-align:left">打印格式化日志后执行 panic(s)</td>
+<td style="text-align:left">log.Panicf(“Panicf: %s”, “panic”)</td>
+</tr>
+<tr>
+<td style="text-align:center">Panicln</td>
+<td style="text-align:left">打印日志并换行后执行 panic(s)</td>
+<td style="text-align:left">log.Panicln(“Panicln”)</td>
+</tr>
+<tr>
+<td style="text-align:center">Fatal</td>
+<td style="text-align:left">打印日志后执行 os.Exit(1)</td>
+<td style="text-align:left">log.Fatal(“Fatal”)</td>
+</tr>
+<tr>
+<td style="text-align:center">Fatalf</td>
+<td style="text-align:left">打印格式化日志后执行 os.Exit(1)</td>
+<td style="text-align:left">log.Fatalf(“Fatalf: %s”, “fatal”)</td>
+</tr>
+<tr>
+<td style="text-align:center">Fatalln</td>
+<td style="text-align:left">打印日志并换行后执行 os.Exit(1)</td>
+<td style="text-align:left">log.Panicln(“Panicln”)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>实际上所有的函数都会换行，因为其内部调用了output方法，该方法定义了日志的结尾必须换行</p>
+</blockquote>
+<h2 id="设置日志的格式">设置日志的格式</h2>
+<p>如果要对日志输出做一些定制，可以使用 log.New 创建一个自定义 logger</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;log&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;os&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// log.New()的参数分别是 log.SetOutput(),log.SetFlags(),log.SetPrefix()三个函数的参数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">logger</span> <span class="o">:=</span> <span class="nx">log</span><span class="p">.</span><span class="nf">New</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">,</span> <span class="s">&#34;[Debug] - &#34;</span><span class="p">,</span> <span class="nx">log</span><span class="p">.</span><span class="nx">Lshortfile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">logger</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;custom logger&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 输出结果为
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">[</span><span class="nx">Debug</span><span class="p">]</span> <span class="o">-</span> <span class="nx">main</span><span class="p">.</span><span class="k">go</span><span class="p">:</span><span class="mi">22</span><span class="p">:</span> <span class="nx">custom</span> <span class="nx">logger</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><code>log.New</code> 函数接收三个参数，分别用来指定：==日志输出位置==（一个 <code>io.Writer</code> 对象）、==日志前缀==（字符串，每次打印日志都会跟随输出）、==日志属性==（定义好的常量，稍后会详细讲解）。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Ldate</td>
+<td style="text-align:left">当前时区的日期，格式：2009/01/23</td>
+</tr>
+<tr>
+<td style="text-align:center">Ltime</td>
+<td style="text-align:left">当前时区的时间，格式：01:23:23</td>
+</tr>
+<tr>
+<td style="text-align:center">Lmicroseconds</td>
+<td style="text-align:left">当前时区的时间，格式：01:23:23.123123，精确到微妙</td>
+</tr>
+<tr>
+<td style="text-align:center">Llongfile</td>
+<td style="text-align:left">全文件名和行号，格式：/a/b/c/d.go:23</td>
+</tr>
+<tr>
+<td style="text-align:center">Lshortfile</td>
+<td style="text-align:left">当前文件名和行号，格式：d.go:23，会覆盖 Llongfile</td>
+</tr>
+<tr>
+<td style="text-align:center">LUTC</td>
+<td style="text-align:left">使用 UTC 而非本地时区，推荐日志全部使用 UTC 时间</td>
+</tr>
+<tr>
+<td style="text-align:center">Lmsgprefix</td>
+<td style="text-align:left">将 prefix 内容从行首移动到日志内容前面</td>
+</tr>
+<tr>
+<td style="text-align:center">LstdFlags</td>
+<td style="text-align:left">标准 logger 对象的初始值（等于： <code>Ldate|Ltime</code>）</td>
+</tr>
+</tbody>
+</table>
+<p>前面说到，<code>log.New()</code>等同于<code>log.SetOutput()</code>,<code>log.SetFlags()</code>,<code>log.SetPrefix()</code>三个函数，因此可以分开设置日志的格式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">log</span><span class="p">.</span><span class="nf">SetPrefix</span><span class="p">(</span><span class="s">&#34;[Calculate] &#34;</span><span class="p">)</span> <span class="c1">// 设置日志的前缀
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">log</span><span class="p">.</span><span class="nf">SetFlags</span><span class="p">(</span><span class="nx">log</span><span class="p">.</span><span class="nx">LstdFlags</span> <span class="p">|</span> <span class="nx">log</span><span class="p">.</span><span class="nx">Lshortfile</span><span class="p">)</span> <span class="c1">// 设置日志的格式
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">log</span><span class="p">.</span><span class="nf">SetOutput</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">)</span> <span class="c1">// 设置日志的输出位置
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 如果要将日志输出到文件，可以使用os.Create()创建一个文件，然后将文件作为参数传入log.SetOutput()函数中
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="使用建议">使用建议</h1>
+<ul>
+<li>log 默认不支持 <code>Debug</code>、<code>Info</code>、<code>Warn</code> 等更细粒度级别的日志输出方法，不过我们可以通过创建多个 Logger 对象的方式来实现，只需要给每个 Logger 对象指定不同的日志前缀即可：
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">loggerDebug</span> <span class="p">=</span> <span class="nx">log</span><span class="p">.</span><span class="nf">New</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">,</span> <span class="s">&#34;[Debug]&#34;</span><span class="p">,</span> <span class="nx">log</span><span class="p">.</span><span class="nx">LstdFlags</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">loggerInfo</span> <span class="p">=</span> <span class="nx">log</span><span class="p">.</span><span class="nf">New</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">,</span> <span class="s">&#34;[Info]&#34;</span><span class="p">,</span> <span class="nx">log</span><span class="p">.</span><span class="nx">LstdFlags</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">loggerWarn</span> <span class="p">=</span> <span class="nx">log</span><span class="p">.</span><span class="nf">New</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">,</span> <span class="s">&#34;[Warn]&#34;</span><span class="p">,</span> <span class="nx">log</span><span class="p">.</span><span class="nx">LstdFlags</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">loggerError</span> <span class="p">=</span> <span class="nx">log</span><span class="p">.</span><span class="nf">New</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">,</span> <span class="s">&#34;[Error]&#34;</span><span class="p">,</span> <span class="nx">log</span><span class="p">.</span><span class="nx">LstdFlags</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>现在的<a href="slog%e6%97%a5%e5%bf%97%5cindex.html" rel="">slog</a>日志支持Debug、Info、Warn、Error四个级别的日志输出</li>
+<li>仅在 main.go 文件中使用 log.Panic、log.Fatal，下层程序遇到错误时先记录日志，然后将错误向上一层层抛出，直到调用栈顶层才决定要不要使用 log.Panic、log.Fatal。</li>
+<li>log 包作为 Go 标准库，仅支持日志的基本功能，不支持记录结构化日志、日志切割、Hook 等高级功能，所以更适合小型项目使用，比如一个单文件的脚本。对于中大型项目，则推荐使用一些主流的第三方日志库，如 logrus、zap、glog 等。</li>
+</ul>
+<blockquote>
+<p>参考文章</p>
+<ul>
+<li><a href="https://jianghushinian.cn/2023/03/11/dive-into-the-go-log-standard-library/" target="_blank" rel="noopener noreffer ">深入探究 Go log 标准库</a></li>
+</ul>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-02-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/log%E6%97%A5%E5%BF%97/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://luigits.gitub.io/log%E6%97%A5%E5%BF%97/" data-title="Log日志" data-hashtags="Go,Go标准库,Log库"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://luigits.gitub.io/log%E6%97%A5%E5%BF%97/" data-hashtag="Go"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://luigits.gitub.io/log%E6%97%A5%E5%BF%97/" data-title="Log日志"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://luigits.gitub.io/log%E6%97%A5%E5%BF%97/" data-title="Log日志"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://luigits.gitub.io/log%E6%97%A5%E5%BF%97/" data-title="Log日志"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/go/">Go</a>,&nbsp;<a href="/tags/go%E6%A0%87%E5%87%86%E5%BA%93/">Go标准库</a>,&nbsp;<a href="/tags/log%E5%BA%93/">Log库</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/linux%E8%AE%B0%E5%BD%95%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/" class="prev" rel="prev" title="Linux记录：安装系统"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Linux记录：安装系统</a>
+            <a href="/slog%E6%97%A5%E5%BF%97/" class="next" rel="next" title="slog日志">slog日志<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.122.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">luigit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"Luigit","id-2":"Luigit"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

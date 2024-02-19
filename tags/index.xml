@@ -4,5 +4,45 @@
         <link>http://luigits.gitub.io/tags/</link>
         <description>Tags - Tag - luigit的小站</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>luigit@aliyun.com (luigit)</managingEditor>
-            <webMaster>luigit@aliyun.com (luigit)</webMaster><atom:link href="http://luigits.gitub.io/tags/" rel="self" type="application/rss+xml" /></channel>
+            <webMaster>luigit@aliyun.com (luigit)</webMaster><lastBuildDate>Mon, 19 Feb 2024 16:46:20 &#43;0800</lastBuildDate><atom:link href="http://luigits.gitub.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Go</title>
+    <link>http://luigits.gitub.io/tags/go/</link>
+    <pubDate>Mon, 19 Feb 2024 16:46:20 &#43;0800</pubDate>
+    <author>luigit</author>
+    <guid>http://luigits.gitub.io/tags/go/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Go标准库</title>
+    <link>http://luigits.gitub.io/tags/go%E6%A0%87%E5%87%86%E5%BA%93/</link>
+    <pubDate>Mon, 19 Feb 2024 16:46:20 &#43;0800</pubDate>
+    <author>luigit</author>
+    <guid>http://luigits.gitub.io/tags/go%E6%A0%87%E5%87%86%E5%BA%93/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Log库</title>
+    <link>http://luigits.gitub.io/tags/log%E5%BA%93/</link>
+    <pubDate>Mon, 19 Feb 2024 16:46:20 &#43;0800</pubDate>
+    <author>luigit</author>
+    <guid>http://luigits.gitub.io/tags/log%E5%BA%93/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Linux</title>
+    <link>http://luigits.gitub.io/tags/linux/</link>
+    <pubDate>Sun, 18 Feb 2024 14:36:26 &#43;0800</pubDate>
+    <author>luigit</author>
+    <guid>http://luigits.gitub.io/tags/linux/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>安装</title>
+    <link>http://luigits.gitub.io/tags/%E5%AE%89%E8%A3%85/</link>
+    <pubDate>Sun, 18 Feb 2024 14:36:26 &#43;0800</pubDate>
+    <author>luigit</author>
+    <guid>http://luigits.gitub.io/tags/%E5%AE%89%E8%A3%85/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>
