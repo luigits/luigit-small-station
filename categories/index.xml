@@ -4,7 +4,15 @@
         <link>http://luigits.gitub.io/categories/</link>
         <description>Categories - Category - luigit的小站</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>luigit@aliyun.com (luigit)</managingEditor>
-            <webMaster>luigit@aliyun.com (luigit)</webMaster><lastBuildDate>Mon, 19 Feb 2024 16:46:20 &#43;0800</lastBuildDate><atom:link href="http://luigits.gitub.io/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>luigit@aliyun.com (luigit)</webMaster><lastBuildDate>Thu, 22 Feb 2024 20:11:40 &#43;0800</lastBuildDate><atom:link href="http://luigits.gitub.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Go</title>
+    <link>http://luigits.gitub.io/categories/go/</link>
+    <pubDate>Thu, 22 Feb 2024 20:11:40 &#43;0800</pubDate>
+    <author>luigit</author>
+    <guid>http://luigits.gitub.io/categories/go/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Go语言</title>
     <link>http://luigits.gitub.io/categories/go%E8%AF%AD%E8%A8%80/</link>
     <pubDate>Mon, 19 Feb 2024 16:46:20 &#43;0800</pubDate>

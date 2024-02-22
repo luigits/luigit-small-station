@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>gohook - Tag - luigit的小站</title>
+        <link>http://luigits.gitub.io/tags/gohook/</link>
+        <description>gohook - Tag - luigit的小站</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>luigit@aliyun.com (luigit)</managingEditor>
+            <webMaster>luigit@aliyun.com (luigit)</webMaster><lastBuildDate>Thu, 22 Feb 2024 20:11:40 &#43;0800</lastBuildDate><atom:link href="http://luigits.gitub.io/tags/gohook/" rel="self" type="application/rss+xml" /><item>
+    <title>获取光标的位置</title>
+    <link>http://luigits.gitub.io/%E8%8E%B7%E5%8F%96%E5%85%89%E6%A0%87%E7%9A%84%E4%BD%8D%E7%BD%AE/</link>
+    <pubDate>Thu, 22 Feb 2024 20:11:40 &#43;0800</pubDate>
+    <author>luigit</author>
+    <guid>http://luigits.gitub.io/%E8%8E%B7%E5%8F%96%E5%85%89%E6%A0%87%E7%9A%84%E4%BD%8D%E7%BD%AE/</guid>
+    <description><![CDATA[<p>实现该功能，需要使用一个GUI库和 <code>robotgo</code> 的子项目 <code>gohook</code>。</p>
+<p>该程序的核心是点击按钮进入阻塞状态，等待鼠标点击，点击之后获得对应位置的坐标</p>]]></description>
+</item>
+</channel>
+</rss>

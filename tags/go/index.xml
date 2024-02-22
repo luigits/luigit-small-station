@@ -10,7 +10,7 @@
     <pubDate>Mon, 19 Feb 2024 16:46:20 &#43;0800</pubDate>
     <author>Luigit</author>
     <guid>http://luigits.gitub.io/slog%E6%97%A5%E5%BF%97/</guid>
-    <description><![CDATA[<p>slog日志使用记录占位</p>]]></description>
+    <description><![CDATA[<p>slog日志是一个轻量级的日志库，使用简单，功能丰富，性能稳定。同时可以被log包所兼容。当使用log包时，可以使用slog包的Logger接口来替换log包的Logger接口。且会受到log包设置的影响。</p>]]></description>
 </item>
 <item>
     <title>Log日志</title>
